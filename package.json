@@ -1,0 +1,28 @@
+{
+  "name": "bailig-abhanar",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bailig/bailig-abhanar.git"
+  },
+  "author": "Bailig Abhanar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bailig/bailig-abhanar/issues"
+  },
+  "homepage": "https://github.com/Bailig/bailig-abhanar#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-1": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
