@@ -1,13 +1,15 @@
+var path = require('path');
+
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/dist.js'
+        path: path.resolve(__dirname, 'dist/assets'),
+        publicPath: 'assets'
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        port: 9000
+        contentBase: 'dist',
+        port: 3000
     },
     module: {
         rules: [
