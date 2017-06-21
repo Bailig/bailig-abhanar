@@ -1,10 +1,14 @@
+import 'bootstrap-loader'
+import './sass/index.scss'
 
-var ReactDOM = require('react-dom');
-var React = require('react');
+import React from 'react'
+import { render } from 'react-dom'
 
-const { render } = ReactDOM
+import Layout from './component/layout'
+
+window.React = React
 
 render(
-    <h1>!!!!!</h1>,
-    document.getElementById("root")
+    <Layout />,
+    document.getElementById('root')
 )

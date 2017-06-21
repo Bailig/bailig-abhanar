@@ -1,0 +1,22 @@
+
+body {
+    background: $back-color;
+}
+
+#root {
+    font-family: $font-main;
+    font-weight: lighter;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-head2;
+    font-weight: lighter;
+}
+
+img {
+    z-index: -1;
+}
+
+section {
+    margin-bottom: 3em;
+}

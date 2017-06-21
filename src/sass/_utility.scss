@@ -1,0 +1,21 @@
+
+.floating-box {
+    box-shadow: 0px 60px 120px -30px $shadow-color;
+    padding: 0;
+}
+
+.btn-square {
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background: black;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 0;
+    transition: .4s cubic-bezier(.59,0,.69,2.01);
+    &:hover {
+        transform: scale(1.2);
+        color: white;
+    }
+}
