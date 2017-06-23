@@ -3,12 +3,18 @@ import './sass/index.scss'
 
 import React from 'react'
 import { render } from 'react-dom'
+import { Provider } from "react-redux"
 
-import Layout from './component/layout'
+import routes from './routes/routes'
+import store from './modules/store'
+
 
 window.React = React
+window.store = store
 
 render(
-    <Layout />,
+    <Provider store={store}>
+        { routes }
+    </Provider>,
     document.getElementById('root')
 )

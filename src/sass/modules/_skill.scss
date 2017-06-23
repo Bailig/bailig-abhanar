@@ -1,17 +1,40 @@
 
 .section-skill {
     position: relative;
-    h2 {
-        position: absolute;
-        top: 8%;
-        left: 50%;
-        margin-left: -20px;
+
+    .skill-header {
+        position: relative;
+        margin-bottom: 2.5em;
+
+        .image-skill {
+            background: url("./images/plant.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 470px;
+        }
+
+        .btn-group {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+
+            .btn-span, .btn-square {
+                float: left;
+            }
+        }
+
     }
-    .btn-square {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -25px;
-        margin-left: -25px;
+
+    .skill-content {
+        .chart {
+            background: white;
+            margin-bottom: 2.5em;
+            padding: .3em 2em 1em 2em;
+        }
+
     }
 }
