@@ -1,0 +1,18 @@
+
+
+
+@mixin backImage($image, $paddingTop: 100%, $hPosition: center, $vPosition: center) {
+    background: url($image);
+    background-repeat: no-repeat;
+    background-position: $hPosition $vPosition;
+    background-size: cover;
+    padding-top: $paddingTop;
+}
+
+@mixin animation($name, $duration: .5s, $delay: 0) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: $delay;
+}

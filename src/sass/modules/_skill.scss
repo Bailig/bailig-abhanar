@@ -5,14 +5,37 @@
     .skill-header {
         position: relative;
         margin-bottom: 2.5em;
+        height: 100vh;
+
+        .text-box {
+            position: absolute;
+            top: 22%;
+        }
 
         .image-skill {
-            background: url("./images/plant.jpg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            height: 470px;
+            @include backImage("./images/plant.jpg", 140%, center, 64%);
         }
+
+        &, .image-skill {
+            transition: .4s .2s;
+        }
+        .btn-group {
+            transition: opacity .1s, visibility 0s .4s;
+        }
+        &.shrink {
+            height: 30vh;
+            .image-skill {
+                padding-top: 30%;
+                width: 100%;
+                margin: 0;
+            }
+            .btn-group {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;  
+            }
+        }
+
 
         .btn-group {
             display: block;
@@ -21,12 +44,10 @@
             left: 50%;
             margin-left: -25px;
             margin-top: -25px;
-
             .btn-span, .btn-square {
                 float: left;
             }
         }
-
     }
 
     .skill-content {

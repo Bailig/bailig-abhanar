@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
-import { content } from '../components/content'
+import { content } from '../components/content'   
+import { showSkillContent, hideSkillContent } from '../../../modules/skills/actions'
 
 const skillTypes = {
     frontend: 'frontend',
@@ -51,7 +52,6 @@ const getBarChartLabelsAndData = (skill, skillType) => {
     }
 }
 
-// {html, css, sass, bootstrap, javascript, jquery, react, redux}
 const getBarChartData = (skill, skillType) => {
     let labelsAndData = getBarChartLabelsAndData(skill, skillType)
     return {
@@ -131,4 +131,15 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(content)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onMount: () => {
+            dispatch(showSkillContent())
+        },
+        onUnmount: () => {
+            dispatch(hideSkillContent())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(content)

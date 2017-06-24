@@ -11,16 +11,3 @@ export const cancelSkillsFetch = () => {
         type: C.SKILLS_FETCH_CANCEL
     }
 }
-
-export const showSkillContent = () => {
-    return {
-        type: C.SKILL_CONTENT_SHOW
-    }
-}
-
-export const hideSkillContent = () => {
-    return {
-        type: C.SKILL_CONTENT_HIDE
-    }
-}
-

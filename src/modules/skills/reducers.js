@@ -1,7 +1,6 @@
 import C from './constants'
 
 const skillInitialState = {
-    isShowingContent: false,
     isFetching: false,
     workExperience: {
         design: 10,

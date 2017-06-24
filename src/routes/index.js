@@ -3,7 +3,7 @@ import About from './about/components/about'
 import SkillHeader from './skill/components/header'
 import SkillContent from './skill/containers/content'
 
-export const App = ({ match }) => (
+export const App = ({ location }) => (
     <main className="container">
         <section className="section-about">
             <div className="row">
@@ -14,7 +14,7 @@ export const App = ({ match }) => (
 
         <section className="section-skill">
             <div className="row">
-                <SkillHeader />
+                <SkillHeader pathName={location.pathname} />
                 <Route path={"/skill"} component={SkillContent}/>
             </div>
         </section>
