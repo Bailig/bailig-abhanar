@@ -1,16 +1,26 @@
+import { NavLink } from 'react-router-dom'
 
-
-export const header = () => {
-    return(
-        <div className={"work-header col-xs-12" + getClassNameFor(pathName)}>
-            <h1 className="section-title col-xs-12 floating-box">Works</h1>
-            <div className="image-work col-xs-9 col-xs-offset-1 floating-box"></div>
-            <NavLink to="/skill" className="btn-group">
-                <button type="button" className="glyphicon glyphicon-menu-hamburger btn-square"></button>
-                <span className="btn-span ">CHECK OUT MORE</span>
-            </NavLink>
-        </div>
-    )
+const getClassNameFor = (pathName) => {
+    return pathName === "/work" ? " shrink" : ""
 }
+
+export const header = ({ pathName }) => (
+    <div className={"section-header col-xs-12" + getClassNameFor(pathName)}>
+    
+        <div className="header-panel col-xs-8 col-xs-offset-3 floating-box">
+
+            <h1 className="section-title floating-box">Works</h1>
+
+            <p className="text-box floating-box">A developer has passion for the work and love to make something awesome.</p>
+
+            <NavLink to="/work" className="btn-group">
+                <span className="btn-span ">CHECK OUT MORE</span>
+                <button type="button" className="glyphicon glyphicon-menu-hamburger btn-square"></button>
+            </NavLink>
+
+        </div>
+    </div>
+)
+
 
 export default header
