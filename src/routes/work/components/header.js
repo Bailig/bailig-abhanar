@@ -9,9 +9,9 @@ export const header = ({ pathName }) => (
     
         <div className="header-panel col-xs-8 col-xs-offset-3 floating-box">
 
-            <h1 className="section-title floating-box">Works</h1>
-
-            <p className="text-box floating-box">A developer has passion for the work and love to make something awesome.</p>
+            <h2 className="section-title floating-box">Works</h2>
+            
+            <p className="text-box floating-box">I have passion for the work and love to make something awesome.</p>
 
             <NavLink to="/work" className="btn-group">
                 <span className="btn-span ">CHECK OUT MORE</span>
@@ -24,3 +24,4 @@ export const header = ({ pathName }) => (
 
 
 export default header
+

@@ -9,9 +9,9 @@ const header = ({ pathName }) => (
 
         <div className="header-panel col-xs-9 col-xs-offset-1 floating-box">
 
-            <h1 className="section-title floating-box">Interests & Skills</h1>
+            <h2 className="section-title floating-box">Interests & Skills</h2>
 
-            <p className="text-box floating-box">A developer has a great interest in following the latest trends and is eager to participate in any continuing education opportunities that are available.</p>
+            <p className="text-box floating-box">I have a great interest in following the latest trends, and I am eager to participate in any continuing education opportunities that are available.</p>
 
             <NavLink to="/skill" className="btn-group">
                 <button type="button" className="glyphicon glyphicon-menu-hamburger btn-square"></button>

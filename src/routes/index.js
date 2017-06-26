@@ -4,6 +4,7 @@ import About from './about/components/about'
 import SkillHeader from './skill/components/header'
 import SkillContent from './skill/containers/content'
 import WorkHeader from './work/components/header'
+import WorkContent from './work/components/content'
 
 export const App = ({ location }) => (
     <main className="container">
@@ -24,11 +25,11 @@ export const App = ({ location }) => (
         <section className="section-work">
             <div className="row">
                 <WorkHeader pathName={location.pathname} />
+                <Route path={"/work"} exact component={WorkContent}/>
             </div>
         </section>
     </main>
 )
-    //<Route path={"/work"} component={SkillContent}/>
 
 
 export const Whoops404 = () =>

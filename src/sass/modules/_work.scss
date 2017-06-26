@@ -43,7 +43,7 @@
         }
 
        &.shrink {
-            height: 30vh;
+            height: 25vh;
 
             .header-panel {
                 padding-top: 30%;
@@ -52,7 +52,6 @@
                 
                 .section-title{
                     left: calc(100% - 102px);
-                    right: 0;
                 }
                 .btn-group {
                     opacity: 0;
@@ -67,11 +66,12 @@
     }
 
     .work-content {
-        .chart {
-            background: white;
-            margin-bottom: 2.5em;
-            padding: .3em 2em 1em 2em;
-        }
+        .project {
+            margin-top: 3em;
 
+            h3 {
+                margin-top: -33px;
+            }
+        }
     }
 }
