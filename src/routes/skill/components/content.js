@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { Pie, HorizontalBar, defaults } from 'react-chartjs-2';
 
 const chartTypes ={
@@ -15,7 +16,7 @@ const chart = ({data, options, title}, chartType) =>
 
 
 export const content = ({pieCharts, barCharts, onLoad}) => 
-    <div className="skill-content col-xs-12" >
+    <div className="skill-content section-content col-xs-12" >
         {pieCharts.map( p => chart(p, chartTypes.pie))}
         {barCharts.map( b => chart(b, chartTypes.bar))}
     </div>

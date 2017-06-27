@@ -9,7 +9,7 @@ export const header = ({ pathName }) => (
     
         <div className="header-panel col-xs-8 col-xs-offset-3 floating-box">
 
-            <h2 className="section-title floating-box">Works</h2>
+            <h2 className="section-title floating-box">Work</h2>
             
             <p className="text-box floating-box">I have passion for the work and love to make something awesome.</p>
 

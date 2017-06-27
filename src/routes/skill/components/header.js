@@ -9,7 +9,7 @@ const header = ({ pathName }) => (
 
         <div className="header-panel col-xs-9 col-xs-offset-1 floating-box">
 
-            <h2 className="section-title floating-box">Interests & Skills</h2>
+            <h2 className="section-title floating-box">Interest & Skill</h2>
 
             <p className="text-box floating-box">I have a great interest in following the latest trends, and I am eager to participate in any continuing education opportunities that are available.</p>
 
@@ -24,4 +24,3 @@ const header = ({ pathName }) => (
 
 export default header;
 
-// <img className="col-xs-9 col-xs-offset-1 img-responsive floating-box" src="assets/plant.jpg" alt="Image"></img>

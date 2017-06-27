@@ -1,8 +1,25 @@
 
 
 .section-about {
-    .text-box {
-        position: relative;
-        bottom: 30px;
+    padding-top: 6em;
+    margin-bottom: 19em;
+
+    .header-panel {
+    position: relative;
+    @include backImage("./images/profile-picture.jpg", 70%, center, 64%);
+
+        .section-title{
+            position: absolute;
+            top: -4em;
+            left: -2em;
+        }
+
+        .text-box {
+            position: absolute;
+            bottom: -10em;
+            left: -2em;
+            max-width: 250px;
+        }
+
     }
 }

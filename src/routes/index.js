@@ -5,6 +5,7 @@ import SkillHeader from './skill/components/header'
 import SkillContent from './skill/containers/content'
 import WorkHeader from './work/components/header'
 import WorkContent from './work/components/content'
+import Contact from './contact/components/contact'
 
 export const App = ({ location }) => (
     <main className="container">
@@ -15,17 +16,38 @@ export const App = ({ location }) => (
         </section>
 
 
+    { 
+        location.pathname === "/" || location.pathname === "/skill" ?  
         <section className="section-skill">
             <div className="row">
                 <SkillHeader pathName={location.pathname} />
-                <Route path={"/skill"} exact component={SkillContent}/>
+                <CSSTransitionGroup
+                    transitionName="fade"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={500}>
+                    <Route location={location} key={location.key} path={"/skill"} exact component={SkillContent}/>
+                </CSSTransitionGroup>
             </div>
-        </section>
+        </section> : "" 
+    }
 
+    { 
+        location.pathname === "/" || location.pathname === "/work" ? 
         <section className="section-work">
             <div className="row">
-                <WorkHeader pathName={location.pathname} />
-                <Route path={"/work"} exact component={WorkContent}/>
+                <WorkHeader pathName={location.pathname} /> 
+                <CSSTransitionGroup
+                    transitionName="fade"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={500}>
+                    <Route location={location} key={location.key} path={"/work"} exact component={WorkContent}/>
+                </CSSTransitionGroup>
+            </div>
+        </section> : "" 
+    }
+        <section className="section-contact">
+            <div className="row">
+                <Contact />
             </div>
         </section>
     </main>

@@ -22,7 +22,7 @@ const skillInitialState = {
         javascript: 5,
         jquery: 5,
         react: 4,
-        redux: 3
+        redux: 4
     },
     backendSkill: {
         cSharp: 5,

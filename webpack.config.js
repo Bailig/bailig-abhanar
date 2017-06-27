@@ -23,7 +23,9 @@ module.exports = {
                 }
             }
         }, 
-        { test: /\.scss$/, use: ["style-loader", "css-loader", "sass-loader"] },{ test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
+        { test: /\.css$/, use: ["style-loader", "css-loader"] },
+        { test: /\.scss$/, use: ["style-loader", "css-loader", "sass-loader"] },
+        { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
         { test: /\.jpg$/, use: 'file-loader'},
         { test: /\.(ttf|eot)$/, loader: 'file-loader' },
         { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },

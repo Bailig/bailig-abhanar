@@ -1,0 +1,30 @@
+
+
+.section-contact {
+
+    .header-panel {
+        position: relative;
+
+        .section-title{
+            position: absolute;
+            top: -1.5em;;
+        }
+
+        .text-box {
+            position: absolute;
+            bottom: -70%;
+            left: -2em;
+            max-width: 250px;
+        }
+
+        nav {
+            margin-top: 1em;
+
+            a {
+                color: black;
+                font-size: 24px;
+                padding-right: .5em;;
+            }
+        }
+    }
+}

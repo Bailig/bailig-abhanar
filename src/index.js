@@ -1,5 +1,6 @@
+
+import '../node_modules/font-awesome/css/font-awesome.min.css'
 import 'bootstrap-loader'
-import './sass/index.scss'
 
 import React from 'react'
 import { render } from 'react-dom'
