@@ -2,6 +2,7 @@
 
 body {
     background: $back-color;
+    position: relative;
 }
 
 #root {
@@ -27,35 +28,18 @@ img, .image-skill {
 }
 
 section {
-    padding-top: 2em;
-    margin-bottom: 12em;
+    padding-top: 9em;
+    margin-bottom: 4em;
 
     .section-header {
 
         &.shrink {
-            margin-bottom: 6em;
+            margin-bottom: 8em;
         }
     }
 }
 
 
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity .3s ease-in .2s;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-active {
-  opacity: 0;
-  transition: opacity .3s ease-out;
-}
 
 
 

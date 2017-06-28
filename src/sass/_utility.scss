@@ -32,6 +32,30 @@
 }
 
 .text-box {
-    padding: 1em;
+    padding: 2em;
     background: $text-back-color;
+
+    @media (max-width: $screen-xs-max) { 
+      padding: 1em;
+    }
+}
+
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity .3s ease-in .2s;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity .3s ease-out;
 }

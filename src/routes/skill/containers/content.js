@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { content } from '../components/content'   
-import { showSkillContent, hideSkillContent } from '../../../modules/skills/actions'
+import  content  from '../components/content'   
+import { fetchSkill } from '../../../modules/skills/actions'
 
 const skillTypes = {
     frontend: 'frontend',
@@ -133,11 +133,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onMount: () => {
-            dispatch(showSkillContent())
-        },
-        onUnmount: () => {
-            dispatch(hideSkillContent())
+        onLoad: () => {
+            dispatch(fetchSkill())
         }
     }
 }

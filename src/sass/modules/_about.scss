@@ -1,12 +1,11 @@
 
 
-.section-about {
-    padding-top: 6em;
-    margin-bottom: 19em;
+#section-about {
+    margin-bottom: 11em;
 
     .header-panel {
-    position: relative;
-    @include backImage("./images/profile-picture.jpg", 70%, center, 64%);
+        position: relative;
+        @include backImage("./images/plant@1x.jpg", 40%, center, 20%);
 
         .section-title{
             position: absolute;
@@ -16,9 +15,9 @@
 
         .text-box {
             position: absolute;
-            bottom: -10em;
-            left: -2em;
-            max-width: 250px;
+            top: 85%;
+            left: -10%;
+            right: 25%;
         }
 
     }

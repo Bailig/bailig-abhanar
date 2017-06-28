@@ -2,7 +2,7 @@
 
 export const about = () => (
     <div className="col-xs-12">
-        <div className="header-panel col-xs-10 col-xs-offset-2 floating-box">
+        <div className="header-panel col-xs-9 col-xs-offset-2 col-md-7 col-md-offset-3 floating-box">
             <div className="section-title">
                 <h1>Bailig Abhanar</h1>
                 <p>A Web Developer</p>
