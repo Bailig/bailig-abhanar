@@ -1,4 +1,5 @@
 import C from './constants'
+import $ from 'jquery'
 
 export const toggleMenu = () => {
     return {
@@ -6,3 +7,17 @@ export const toggleMenu = () => {
     }
 }
 
+
+export const scrollTo = (targetId, pathName="") => (dispatch) => {
+    dispatch(toggleMenu())
+    const delay = pathName === "/skill" || pathName === "/work" ? 700 : 0
+
+    setTimeout((() => {
+        $('html, body').animate({
+            scrollTop: $(targetId).offset().top + 60
+        }, 500)
+        dispatch({
+            type: C.PAGE_SCROLL
+        })
+    }), delay)
+}

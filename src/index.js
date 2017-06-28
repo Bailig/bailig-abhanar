@@ -4,11 +4,11 @@ import 'bootstrap-loader'
 
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from "react-redux"
-// import './firebase'
+import { Provider } from 'react-redux'
 
 import routes from './routes/routes'
 import store from './modules/store'
+
 
 window.React = React
 window.store = store

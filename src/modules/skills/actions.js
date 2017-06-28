@@ -1,7 +1,6 @@
-// import { ref } from '../../firebase'
+import { skillRef } from '../../firebase'
 import C from './constants'
 
-// const skillRef = ref.child('skill')
 
 export const cancelSkillFetch = () => {
     return {
@@ -9,18 +8,23 @@ export const cancelSkillFetch = () => {
     }
 }
 
-export const fetchSkill = () => (dispatch, getState) => {
+export const updateSkill = (data) => {
+    return {
+        type: C.SKILLS_UPDATE,
+        payload: data
+    }
+}
 
+export const fetchSkill = () => (dispatch, getState) => {
     if (getState().skill.isFetching) {
         return
     }
-    // skillRef.on('value', snapshot => {
-    //     dispatch ({
-    //         type: C.SKILLS_FETCH,
-    //         payload: snapshot.val()
-    //     })
-    //     cancelSkillFetch()
-    // })
+    dispatch({
+        type: C.SKILLS_FETCH
+    })
+    skillRef.on('value', function(snapshot) {
+        dispatch(updateSkill(snapshot.val()))
+    })
 }
 
 

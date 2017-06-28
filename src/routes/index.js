@@ -4,7 +4,7 @@ import About from './about/components/about'
 import SkillHeader from './skill/components/header'
 import SkillContent from './skill/containers/content'
 import WorkHeader from './work/components/header'
-import WorkContent from './work/components/content'
+import WorkContent from './work/containers/content'
 import Contact from './contact/components/contact'
 import Menu from './menu/containers/menu'
 

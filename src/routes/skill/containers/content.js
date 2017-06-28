@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import  content  from '../components/content'   
 import { fetchSkill } from '../../../modules/skills/actions'
+import { scrollTo } from '../../../modules/menu/actions'
 
 const skillTypes = {
     frontend: 'frontend',
@@ -110,23 +111,28 @@ const mapStateToProps = (state, ownProps) => {
     return {
         pieCharts: [{
             data: getPieChartData(state.skill.personalInterest),
-            title: "Personal Interest"
+            title: "Personal Interest",
+            chartType: "pie"
         }, {
             data: getPieChartData(state.skill.workExperience),
-            title: "Work Experience"
+            title: "Work Experience",
+            chartType: "pie"
         }],
         barCharts: [{
             data: getBarChartData(state.skill.frontendSkill, skillTypes.frontend),
             options: getBarChartOptions(),
-            title: "Front-end"
+            title: "Front-end",
+            chartType: "bar"
         }, {
             data: getBarChartData(state.skill.backendSkill, skillTypes.backend),
             options: getBarChartOptions(),
-            title: "Back-end"
+            title: "Back-end",
+            chartType: "bar"
         }, {
             data: getBarChartData(state.skill.iosSkill, skillTypes.ios),
             options: getBarChartOptions(),
-            title: "iOS"
+            title: "iOS",
+            chartType: "bar"
         }]
     }
 }
@@ -135,6 +141,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onLoad: () => {
             dispatch(fetchSkill())
+        },
+        onBack: () => {
+            dispatch(scrollTo("#section-skill"))
         }
     }
 }

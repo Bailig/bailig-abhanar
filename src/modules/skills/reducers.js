@@ -22,7 +22,7 @@ const skillInitialState = {
         javascript: 5,
         jquery: 5,
         react: 4,
-        redux: 4
+        redux: 3
     },
     backendSkill: {
         cSharp: 5,
@@ -42,6 +42,15 @@ const skillInitialState = {
 }
 const skill = (state = skillInitialState, action) => {
     switch (action.type) {
+        case C.SKILLS_UPDATE:
+            return {...state,
+                isFetching: true,
+                workExperience: action.payload.workExperience,
+                personalInterest: action.payload.personalInterest,
+                frontendSkill: action.payload.frontendSkill,
+                backendSkill: action.payload.backendSkill,
+                iosSkill: action.payload.iosSkill
+            }
         case C.SKILLS_FETCH:
             return {...state,
                 isFetching: true

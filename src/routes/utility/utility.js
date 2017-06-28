@@ -1,17 +1,8 @@
 import $ from 'jquery'
 
-export const onScrollTo = (targetId, delay=0, callBack=f=>f) => {
-    setTimeout((() => {
-        $('html, body').animate({
-            scrollTop: $(targetId).offset().top + 60
-        }, 500)
-    }), delay)
-    
-    callBack()
-}
-
 let lastId;
 
+// spy scroll to toggle active class on nav link
 $(window).scroll(function(){
    // Get container scroll position
    var fromTop = $(this).scrollTop()

@@ -8,7 +8,7 @@ const dbvProject = () => (
         <p>Training delivery management system</p>
         <p>Design > Build > Validate = Competencies (DBV-C) is a cloud-based curriculum and training delivery management system. It provides the tools to dynamically and effectively manage continuous change in curriculum design and training delivery.</p>
         <h4>Overview of the problem</h4>
-        <p>The dbv-c was designed to solve many problems that occur in most of the training systems. Some of the primary issues required to be addressed are listed below.</p>
+        <p>The DBV-C was designed to solve many problems that occur in most of the training systems. Some of the primary issues required to be addressed are listed below.</p>
         <ul>
             <li>Graduates from college only have a degree or diploma along with transcripts, which is not necessarily helpful for employers to determine whether the graduates have certain skills or not.</li>
             <li>A typical curriculum often does not have a way to keep track of whether all the foundational skills are taught before the advanced skills.</li>
@@ -49,7 +49,7 @@ const dbvProject = () => (
 )
 
 
-export const content = (props) => (
+export const content = ({ onBack }) => (
     <div className="work-content section-content col-xs-12 col-md-9 col-md-offset-3">
         <div className="text-box floating-box">
             <p>This rough framework outlines my process of developing web applications:</p>
@@ -78,7 +78,7 @@ export const content = (props) => (
             </dl>
         </div>
         {dbvProject()}
-        <NavLink onClick={() => onScrollTo("#section-work", 0)} to={{pathname: "/", hash: "#section-work"}} className="btn-group clearfix">
+        <NavLink onClick={() => onBack()} to={{pathname: "/", hash: "#section-work"}} className="btn-group clearfix">
             <button type="button" className="glyphicon glyphicon glyphicon-chevron-left btn-square"></button>
             <span className="btn-span ">BACK</span>
         </NavLink>

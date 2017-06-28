@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Menu from '../components/menu'
-import { toggleMenu } from '../../../modules/menu/actions'
+import { toggleMenu, scrollTo } from '../../../modules/menu/actions'
 
 const mapStateToProps = (state) => {
     return {
@@ -10,10 +10,13 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onToggleMenu: () => {
             dispatch(toggleMenu())
+        },
+        onScrollTo: (targetId) => {
+            dispatch(scrollTo(targetId, ownProps.pathName))
         }
     }
 }
