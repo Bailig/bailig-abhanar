@@ -8,9 +8,12 @@ export const toggleMenu = () => {
 }
 
 
-export const scrollTo = (targetId, pathName="") => (dispatch) => {
+export const scrollTo = (targetId, pathName, delay=0) => (dispatch) => {
     dispatch(toggleMenu())
-    const delay = pathName === "/skill" || pathName === "/work" ? 700 : 0
+
+    if (pathName != null) {
+        delay = pathName === "/skill" || pathName === "/work" ? 700 : 0
+    }
 
     setTimeout((() => {
         $('html, body').animate({
