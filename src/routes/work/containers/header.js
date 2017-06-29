@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onScroll: () => {
-            dispatch(scrollTo("#section-work", null, 700))
+            dispatch(scrollTo("#section-work", ownProps.pathName))
         }
     }
 }
