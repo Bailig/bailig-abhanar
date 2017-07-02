@@ -8,10 +8,11 @@ export const contact = () =>
             <h4>Bailig Abhanar</h4>
             <p>Web Developer</p>
             <p>bailigjob@outlook.com</p>
-            <a href="/assets/Resume_LigeBai.pdf" download>Resume <span className="glyphicon glyphicon-download" /></a>
+            <a href="/assets/Resume_Bailig_Abhanar.pdf" download>Resume <span className="glyphicon glyphicon-download" /></a>
             <nav className="social-nav">
                 <a href="https://www.instagram.com/bailig/" target="_blank"><i className="fa fa-instagram"></i></a>
                 <a href="https://github.com/Bailig" target="_blank"><i className="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bailig-abhanar-4054a4b8/" target="_blank"><i className="fa fa-linkedin"></i></a>
             </nav>
         </div>
     </div>
