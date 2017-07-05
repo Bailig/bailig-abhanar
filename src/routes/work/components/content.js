@@ -34,7 +34,7 @@ const dbvProject = () => (
             <li>Google classroom</li>
         </ul>
         <h4>Design challenge</h4>
-        <p>Because there are several different user roles, and these roles all have different levels of controls over the application, a lot of duplicated code was written in order to make sure the current UI elements are displayed for the role. This led to too much logic being placed in the view, which is very difficult to maintain. My solution was to centralize all the user checking rules to custom HTML Helpers, which are static functions used to render HTML markups in ASP.NET applications.</p>
+        <p>Because there are several different user roles, and these roles all have different levels of controls over the application, a lot of duplicated code was written in order to make sure the correct UI elements are displayed for the role. This led to too much logic being placed in the view, which is very difficult to maintain. My solution was to centralize all the user checking logic to custom HTML Helpers, which are static functions used to render HTML markups in ASP.NET applications.</p>
         <h4>List of Technologies</h4>
         <p>It was required by the client to use following technologies for the application development.</p>
         <ul>
