@@ -31,7 +31,10 @@ const skillInitialState = {
         python: 3,
         node: 4,
         express: 1,
-        postgres: 2
+        postgres: 2,
+        ruby: 3,
+        rails: 2,
+        mysql: 2
     },
     iosSkill: {
         swift: 5,

@@ -7,7 +7,9 @@ export const contact = () =>
             <p>This site was developed with React, Redux, and Firebase real-time database. <a href="https://github.com/Bailig/bailig-abhanar" target="_blank">GitHub Repo.</a></p>
             <h4>Bailig Abhanar</h4>
             <p>Web Developer</p>
-            <p>bailigjob@outlook.com</p>
+            <p>
+                <a href="mailto:bailigjob@outlook.com">bailigjob@outlook.com</a>
+            </p>
             <a href="/assets/Resume_Bailig_Abhanar.pdf" download>Resume <span className="glyphicon glyphicon-download" /></a>
             <nav className="social-nav">
                 <a href="https://www.instagram.com/bailig/" target="_blank"><i className="fa fa-instagram"></i></a>

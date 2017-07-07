@@ -41,8 +41,8 @@ const getBarChartLabelsAndData = (skill, skillType) => {
     }
     else if (skillType === skillTypes.backend) {
         return {
-            labels: ['C#', 'ASP.NET', 'SQL Server', 'Python', 'Node', 'Express', 'PostgreSQL'],
-            data: [skill.cSharp, skill.asp, skill.sqlServer, skill.python, skill.node, skill.express, skill.postgres]
+            labels: ['C#', 'ASP.NET', 'SQL Server', 'Python', 'Node', 'Express', 'PostgreSQL', 'Ruby', 'Ruby on Rails', 'MySQL'],
+            data: [skill.cSharp, skill.asp, skill.sqlServer, skill.python, skill.node, skill.express, skill.postgres, skill.ruby, skill.rails, skill.mysql]
         }
     }
     else if (skillType === skillTypes.ios) {
