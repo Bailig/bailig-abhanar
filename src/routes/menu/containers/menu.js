@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 import Menu from '../components/menu'
 import { toggleMenu, scrollTo } from '../../../modules/menu/actions'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        isShowingMenu: state.menu.isShowing,
         menuButtonClassName: state.menu.isShowing ? " glyphicon glyphicon-remove" : " glyphicon-menu-hamburger",
-        menuNavClassName: state.menu.isShowing ? "" : " hidden-xs hidden-sm"
+        menuNavClassName: state.menu.isShowing ? "" : " hidden-xs hidden-sm",
+        loginLinkClassName: ownProps.pathName === "/login" ? "active" : ""
     }
 }
 

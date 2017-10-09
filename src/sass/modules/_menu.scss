@@ -41,10 +41,10 @@
 
 @media (min-width: $screen-md-min) { 
      .menu {
-        display: block;
+        display: block; 
         position: fixed;
         z-index: 100;
-        top: 60%;
+        bottom: 30px;
         
         nav {
             a {

@@ -7,6 +7,8 @@ import WorkHeader from './work/containers/header'
 import WorkContent from './work/containers/content'
 import Contact from './contact/components/contact'
 import Menu from './menu/containers/menu'
+import Login from './access/components/login'
+
 
 export const App = ({ location }) => (
     <div >
@@ -58,4 +60,14 @@ export const App = ({ location }) => (
 export const Whoops404 = () =>
     <div>
         <h1>Whoops, route not found!</h1>
+    </div>
+
+export const Access = () =>
+    <div>
+        <Menu pathName={location.pathname} />
+        <main className="container">
+            <section id="section-access">
+                <Login />
+            </section>
+        </main>
     </div>

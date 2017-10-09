@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-export const menu = ({menuButtonClassName="", menuNavClassName="", onToggleMenu, onScrollTo}) => {
+export const menu = ({menuButtonClassName="", menuNavClassName="", loginLinkClassName="", onToggleMenu, onScrollTo}) => {
 
     const onNavLinkClicked = (targetId) => {
         onToggleMenu()
@@ -18,6 +18,7 @@ export const menu = ({menuButtonClassName="", menuNavClassName="", onToggleMenu,
                     <NavLink onClick={() => onNavLinkClicked("#section-skill")} to={{pathname: "/", hash: "#section-skill"}} activeClassName=" ">INTEREST & SKILL</NavLink>
                     <NavLink onClick={() => onNavLinkClicked("#section-work")} to={{pathname: "/", hash: "#section-work"}} activeClassName=" ">WORK</NavLink>
                     <NavLink onClick={() => onNavLinkClicked("#section-contact")} to={{pathname: "/", hash: "#section-contact"}} activeClassName=" ">CONTACT</NavLink>
+                    <NavLink onClick={() => onNavLinkClicked()} to="/login" activeClassName=" active">LOGIN</NavLink>
                 </nav>
             </div>
         </div>

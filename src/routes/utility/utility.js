@@ -26,7 +26,7 @@ $(window).scroll(function(){
    if (lastId !== currentId) {
        lastId = currentId;
        // Set/remove active class
-       $links.removeClass('active')
+       $links.not("a[href='/login']").removeClass('active')
        $links.filter("[href='/#"+currentId+"']").addClass("active");
    }                   
 });

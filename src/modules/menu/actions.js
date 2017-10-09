@@ -9,6 +9,9 @@ export const toggleMenu = () => {
 
 
 export const scrollTo = (targetId, pathName="") => (dispatch) => {
+    if (!targetId)
+        return
+    
     const delay = pathName === "/skill" || pathName === "/work" ? 700 : 0
     
     setTimeout((() => {
