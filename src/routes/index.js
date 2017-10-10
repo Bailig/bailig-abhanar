@@ -65,12 +65,12 @@ export const Whoops404 = () =>
         <h1>Whoops, route not found!</h1>
     </div>
 
-export const Access = ({ location }) =>
+export const Access = ({ location, history }) =>
     <div>
         <Menu pathName={location.pathname} />
         <main className='container'>
             <section id='section-access'>
-                <Login />
+                <Login history={history} />
             </section>
         </main>
     </div>
