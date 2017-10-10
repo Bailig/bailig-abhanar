@@ -6,7 +6,8 @@ const menuInitialState = {
 const menu = (state = menuInitialState, action) => {
     switch (action.type) {
         case C.MENU_TOGGLE:
-            return {...state,
+            return { 
+                ...state,
                 isShowing: !state.isShowing
             }
         default:

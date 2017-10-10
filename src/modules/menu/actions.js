@@ -1,5 +1,5 @@
-import C from './constants'
 import $ from 'jquery'
+import C from './constants'
 
 export const toggleMenu = () => {
     return {
@@ -8,11 +8,12 @@ export const toggleMenu = () => {
 }
 
 
-export const scrollTo = (targetId, pathName="") => (dispatch) => {
-    if (!targetId)
+export const scrollTo = (targetId, pathName = '') => (dispatch) => {
+    if (!targetId) {
         return
+    }
     
-    const delay = pathName === "/skill" || pathName === "/work" ? 700 : 0
+    const delay = pathName === '/skill' || pathName === '/work' ? 700 : 0
     
     setTimeout((() => {
         $('html, body').animate({

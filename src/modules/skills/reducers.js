@@ -46,7 +46,8 @@ const skillInitialState = {
 const skill = (state = skillInitialState, action) => {
     switch (action.type) {
         case C.SKILLS_UPDATE:
-            return {...state,
+            return {
+                ...state,
                 isFetching: true,
                 workExperience: action.payload.workExperience,
                 personalInterest: action.payload.personalInterest,
@@ -55,11 +56,13 @@ const skill = (state = skillInitialState, action) => {
                 iosSkill: action.payload.iosSkill
             }
         case C.SKILLS_FETCH:
-            return {...state,
+            return {
+                ...state,
                 isFetching: true
             }
         case C.SKILLS_FETCH_CANCEL:
-            return {...state,
+            return {
+                ...state,
                 isFetching: false
             }
         default:

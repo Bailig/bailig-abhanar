@@ -1,9 +1,9 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { onScrollTo } from '../../utility/utility'
 
 
 const dbvProject = () => (
-    <div className="project text-box floating-box">
+    <div className='project text-box floating-box'>
         <h3>DBV-C</h3>
         <p>Training delivery management system</p>
         <p>Design > Build > Validate = Competencies (DBV-C) is a cloud-based curriculum and training delivery management system. It provides the tools to dynamically and effectively manage continuous change in curriculum design and training delivery.</p>
@@ -50,8 +50,8 @@ const dbvProject = () => (
 
 
 export const content = ({ onBack }) => (
-    <div className="work-content section-content col-xs-12 col-md-9 col-md-offset-3">
-        <div className="text-box floating-box">
+    <div className='work-content section-content col-xs-12 col-md-9 col-md-offset-3'>
+        <div className='text-box floating-box'>
             <p>This rough framework outlines my process of developing web applications:</p>
             <dl>
                 <dt>Identify the problem</dt>
@@ -77,10 +77,12 @@ export const content = ({ onBack }) => (
                 <dt>Get user feedback, and repeat.</dt>
             </dl>
         </div>
+        
         {dbvProject()}
-        <NavLink onClick={() => onBack()} to={{pathname: "/", hash: "#section-work"}} className="btn-group clearfix">
-            <button type="button" className="glyphicon glyphicon glyphicon-chevron-left btn-square"></button>
-            <span className="btn-span ">BACK</span>
+
+        <NavLink onClick={() => onBack()} to={{ pathname: '/', hash: '#section-work' }} className='btn-group clearfix'>
+            <button type='button' className='glyphicon glyphicon glyphicon-chevron-left btn-square' />
+            <span className='btn-span '>BACK</span>
         </NavLink>
     </div>
 )

@@ -6,11 +6,13 @@ const workInitialState = {
 const work = (state = workInitialState, action) => {
     switch (action.type) {
         case C.WORKS_FETCH:
-            return {...state,
+            return {
+                ...state,
                 isFetching: true
             }
         case C.WORKS_FETCH_CANCEL:
-            return {...state,
+            return {
+                ...state,
                 isFetching: false
             }
         default:

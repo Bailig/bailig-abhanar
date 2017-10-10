@@ -4,9 +4,9 @@ import { toggleMenu, scrollTo } from '../../../modules/menu/actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        menuButtonClassName: state.menu.isShowing ? " glyphicon glyphicon-remove" : " glyphicon-menu-hamburger",
-        menuNavClassName: state.menu.isShowing ? "" : " hidden-xs hidden-sm",
-        loginLinkClassName: ownProps.pathName === "/login" ? "active" : ""
+        menuButtonClassName: state.menu.isShowing ? ' glyphicon glyphicon-remove' : ' glyphicon-menu-hamburger',
+        menuNavClassName: state.menu.isShowing ? '' : ' hidden-xs hidden-sm',
+        loginLinkClassName: ownProps.pathName === '/login' ? 'active' : ''
     }
 }
 

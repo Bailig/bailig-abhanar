@@ -22,9 +22,7 @@ export const fetchSkill = () => (dispatch, getState) => {
     dispatch({
         type: C.SKILLS_FETCH
     })
-    skillRef.on('value', function(snapshot) {
+    skillRef.on('value', (snapshot) => {
         dispatch(updateSkill(snapshot.val()))
     })
 }
-
-

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import  content  from '../components/content'   
+import content from '../components/content'   
 import { fetchSkill } from '../../../modules/skills/actions'
 import { scrollTo } from '../../../modules/menu/actions'
 
@@ -10,9 +10,9 @@ const skillTypes = {
 
 }
 
-const getPieChartData = ({design, frontend, backend, ios}) => {
+const getPieChartData = ({ design, frontend, backend, ios }) => {
     return {
-        labels: ["Design", "Front-end", "Back-end", "iOS"],
+        labels: ['Design', 'Front-end', 'Back-end', 'iOS'],
         datasets: [{
             data: [design, frontend, backend, ios],
             backgroundColor: [
@@ -38,23 +38,21 @@ const getBarChartLabelsAndData = (skill, skillType) => {
             labels: ['HTML', 'CSS', 'SASS', 'Bootstrap', 'JavaScript', 'jQuery', 'React', 'Redux'],
             data: [skill.html, skill.css, skill.sass, skill.bootstrap, skill.javascript, skill.jquery, skill.react, skill.redux]
         }
-    }
-    else if (skillType === skillTypes.backend) {
+    } else if (skillType === skillTypes.backend) {
         return {
             labels: ['C#', 'ASP.NET', 'SQL Server', 'Python', 'Node', 'Express', 'PostgreSQL', 'Ruby', 'Ruby on Rails', 'MySQL'],
             data: [skill.cSharp, skill.asp, skill.sqlServer, skill.python, skill.node, skill.express, skill.postgres, skill.ruby, skill.rails, skill.mysql]
         }
-    }
-    else if (skillType === skillTypes.ios) {
+    } else if (skillType === skillTypes.ios) {
         return {
             labels: ['Swift', 'Objective-C', 'CoreData', 'Firebase'],
-            data: [skill.swift, skill.objectiveC, skill.coreData, skill.firebase ]
+            data: [skill.swift, skill.objectiveC, skill.coreData, skill.firebase]
         }
     }
 }
 
 const getBarChartData = (skill, skillType) => {
-    let labelsAndData = getBarChartLabelsAndData(skill, skillType)
+    const labelsAndData = getBarChartLabelsAndData(skill, skillType)
     return {
         labels: labelsAndData.labels,
         datasets: [
@@ -94,11 +92,11 @@ const getBarChartOptions = () => {
             }]
         },
         legend: {
-    	display: false
+            display: false
         },
         tooltips: {
             callbacks: {
-                label: function(tooltipItem) {
+                label: (tooltipItem) => {
                     return tooltipItem.xLabel;
                 }
             }
@@ -106,33 +104,32 @@ const getBarChartOptions = () => {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    
+const mapStateToProps = (state) => {
     return {
         pieCharts: [{
             data: getPieChartData(state.skill.personalInterest),
-            title: "Personal Interest",
-            chartType: "pie"
+            title: 'Personal Interest',
+            chartType: 'pie'
         }, {
             data: getPieChartData(state.skill.workExperience),
-            title: "Work Experience",
-            chartType: "pie"
+            title: 'Work Experience',
+            chartType: 'pie'
         }],
         barCharts: [{
             data: getBarChartData(state.skill.frontendSkill, skillTypes.frontend),
             options: getBarChartOptions(),
-            title: "Front-end",
-            chartType: "bar"
+            title: 'Front-end',
+            chartType: 'bar'
         }, {
             data: getBarChartData(state.skill.backendSkill, skillTypes.backend),
             options: getBarChartOptions(),
-            title: "Back-end",
-            chartType: "bar"
+            title: 'Back-end',
+            chartType: 'bar'
         }, {
             data: getBarChartData(state.skill.iosSkill, skillTypes.ios),
             options: getBarChartOptions(),
-            title: "iOS",
-            chartType: "bar"
+            title: 'iOS',
+            chartType: 'bar'
         }]
     }
 }
@@ -143,7 +140,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(fetchSkill())
         },
         onBack: () => {
-            dispatch(scrollTo("#section-skill"))
+            dispatch(scrollTo('#section-skill'))
         }
     }
 }

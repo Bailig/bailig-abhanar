@@ -6,7 +6,7 @@ import { scrollTo } from '../../../modules/menu/actions'
 const mapDispatchToProps = (dispatch) => {
     return {
         onBack: () => {
-            dispatch(scrollTo("#section-work"))
+            dispatch(scrollTo('#section-work'))
         }
     }
 }
